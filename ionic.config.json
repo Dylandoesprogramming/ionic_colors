@@ -1,5 +1,8 @@
 {
   "name": "quotes",
-  "app_id": "",
-  "type": "ionic1"
+  "app_id": "cd3cc6c6",
+  "type": "ionic1",
+  "watchPatterns": [
+    "scss/**/*"
+  ]
 }

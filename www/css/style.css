@@ -1,1 +1,65 @@
-/* Empty. Add your own CSS if you like */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+ion-nav-view,
+ion-pane,
+ion-content,
+ion-slides,
+ion-slide-page {
+    height: 100%;
+    width: 100%;
+}
+
+.colorText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* #navView {
+    width: 100%;
+    height: 100%;
+} */
+
+#welcome {
+    font-family: 'Oswald', sans-serif;
+    font-size: 5em;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#welcomeSlide {
+    background-image: url("https://cdn.pixabay.com/photo/2016/06/28/05/31/abstract-1483988_960_720.png");
+}
+
+.homeSlide {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+.sliver {
+    width: 20%;
+    height: 100vh;
+}
+
+#colorHeader {
+    font-family: 'Oswald', sans-serif;
+    font-size: 5em;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
