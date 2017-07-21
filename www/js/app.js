@@ -6,13 +6,9 @@ angular.module('Quotes', ['ionic'])
             url: '',
             templateUrl: 'homeTemp.html'
         })
-        .state('pastel', {
-            url: '/pastel',
-            templateUrl: 'pastelTemp.html'
-        })
-        .state('neon', {
-            url: '/neon',
-            templateUrl: 'neonTemp.html',
+        .state('colors', {
+            url: '/color',
+            templateUrl: 'neonTemp.html'
         })
         // $urlRouterProvider.otherwise('/')
 })

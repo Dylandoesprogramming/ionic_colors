@@ -1,11 +1,13 @@
 <ion-pane ng-controller="homeCtrl" id="ionPane">
     <ion-content scroll="false">
         <ion-slides options="options" slider="data.slider">
-            <ion-slide-page ng-repeat="color in curColor" style="background-color:{{color}};">
-                <div>
-                    <h1 ng-click="changeColor('pastel')" ui-sref="pastel" class="colorText">{{color}}</h1>
-                </div>
+            <ion-slide-page id="welcomeSlide" ui-sref="home">
+                <h1 id="welcome">Tap to return Home</h1>
             </ion-slide-page>
+            <ion-slide-page ng-repeat="color in curColor" style="background-color: {{color}}">
+                <h1 id="colorHeader">{{color}}</h1>
+            </ion-slide-page>
+
         </ion-slides>
     </ion-content>
 </ion-pane>

@@ -4,11 +4,12 @@
             <ion-slide-page id="welcomeSlide">
                 <h1 id="welcome">Welcome to Pallete Muse</h1>
             </ion-slide-page>
-            <ion-slide-page ng-repeat="(key,color) in allColors" class="homeSlide" ng-click="changeColor('{{key}}')" ui-sref="{{key}}">
-                <div class="sliver" ng-repeat="sliver in color" style="background-color:{{sliver}};">
+            <ion-slide-page ng-repeat="(key,color) in allColors track by $index" class="homeSlide" ng-click="changeColor(key)" ui-sref="colors">
+                <div class="sliver" ng-repeat="sliver in color track by $index" style="background-color:{{sliver}};">
                 </div>
                 <h1 id="colorHeader">{{key}}</h1>
             </ion-slide-page>
+
         </ion-slides>
     </ion-content>
 </ion-pane>
