@@ -1,6 +1,14 @@
-angular.module("Quotes").controller("homeCtrl", function($scope, colorSrvc) {
-    $scope.curColor = colorSrvc.curColor;
-    $scope.allColors = colorSrvc.colors;
+angular.module("Quotes").controller("homeCtrl", function($scope, colorSrvc, colorDataSrvc) {
+    $scope.curColor = colorDataSrvc.curColor;
+
+    $scope.getPalettes = function() {
+        $scope.allColors = colorDataSrvc.allColors;
+    }
+
+    $scope.getPalettes()
+
+
+
     /////START SLIDEBOX FUNCTION///////
     $scope.options = {
         loop: true,
@@ -12,9 +20,7 @@ angular.module("Quotes").controller("homeCtrl", function($scope, colorSrvc) {
         $scope.slider = data.slider;
     });
 
-    $scope.$on("$ionicSlides.slideChangeStart", function(event, data) {
-        console.log('Slide change is beginning');
-    });
+    $scope.$on("$ionicSlides.slideChangeStart", function(event, data) {});
 
     $scope.$on("$ionicSlides.slideChangeEnd", function(event, data) {
         // note: the indexes are 0-based
@@ -24,7 +30,7 @@ angular.module("Quotes").controller("homeCtrl", function($scope, colorSrvc) {
     /////////END SLIDEBOX FUNCTIONS////////
 
     $scope.changeColor = function(color) {
-        colorSrvc.setColor(color)
+        curColor = colorDataSrvc.changeColor(color);
     }
 
 }); //end of homeCtrl
