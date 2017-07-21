@@ -8,7 +8,7 @@ angular.module('Quotes', ['ionic'])
         })
         .state('colors', {
             url: '/color',
-            templateUrl: 'neonTemp.html'
+            templateUrl: 'colorTemp.html'
         })
         // $urlRouterProvider.otherwise('/')
 })

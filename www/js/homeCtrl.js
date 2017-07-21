@@ -1,4 +1,4 @@
-angular.module("Quotes").controller("homeCtrl", function($scope, colorSrvc, colorDataSrvc) {
+angular.module("Quotes").controller("homeCtrl", function($scope, colorDataSrvc) {
     $scope.curColor = colorDataSrvc.curColor;
 
     $scope.getPalettes = function() {
